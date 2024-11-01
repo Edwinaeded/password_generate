@@ -1,1 +1,75 @@
-<h1>hello!hello!</h1>
+<div class="main-card card text-left">
+  <div class="card-header">
+    <h3>Ramdom Password Generator <i class="fa-solid fa-key"></i></h3>
+  </div>
+  <div class="card-body">
+    <div id="length_setting" class="row">
+      <div class="col-4">Password Length</div>
+      <div class="col-8">
+        <input class="form-control" type="text" aria-label="default input example" id="length_setting_input">
+        <span id="length_setting_input_note">Length is available between 4 ~ 16</span>
+      </div>
+    </div>
+
+    <div id="check_options">
+      <div class="row">
+        <div class="card-text col-4">Include Lowercase Characters</div>
+        <div class="form-check col-8">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            <span id="check_btn_note">(e.g. abcdefg)</span>
+          </label> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="card-text col-4">Include Uppercase Characters</div>
+        <div class="form-check col-8">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            <span id="check_btn_note">(e.g. ABCDEFG)</span>
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card-text col-4">Include Numbers</div>
+        <div class="form-check col-8">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            <span id="check_btn_note">(e.g. 1234567)</span>
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card-text col-4">Include Symbols</div>
+        <div class="form-check col-8">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            <span id="check_btn_note">(e.g. !@#$%^*+)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert alert-warning" role="alert" id="result_box">
+      Your password is : XXXX
+    </div>
+    <div id="exclude-setting" class="row">
+    <div class="col-4">Exclude Characters</div>
+      <div class="col-8">
+        <input class="form-control" type="text" aria-label="default input example" id="exclude_setting_input">
+        <span id="exclude_setting_input_note">These characters will not appear in the password</span>
+      </div>  
+    </div>
+    <div id="generate_btn_container">
+      {{!-- <div class="d-grid col-2 mx-auto" > --}}
+        <button class="btn btn-primary" type="button" id="generate_btn">Generate Password <i class="fa-solid fa-rocket"></i></button>
+      {{!-- </div> --}}
+    </div>
+  </div>
+
+  <div class="card-footer text-body-secondary">
+    Author : Edwina , Liu
+  </div>
+</div>
+
+

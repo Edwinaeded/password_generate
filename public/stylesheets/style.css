@@ -1,0 +1,64 @@
+html,body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h3 {
+  margin: 0px;
+}
+
+.main-card {
+  width : 1000px ;
+  /* height : 550px ; */
+  display : flex ;
+  margin : 30px auto ;
+  line-height: 45px ;
+}
+
+#length_setting_input_note {
+  color : #999999 ;
+  font-size : 14px ; 
+}
+
+.form-check {
+  font-size : 18px ;
+  display : flex ;
+  align-items : center ;
+}
+
+#check_btn_note {
+  font-size : 13px ; 
+  margin-left : 3px ;
+}
+
+#exclude_setting_input_note {
+  color: #999999;
+  font-size: 14px;
+}
+
+#result_box {
+  display : flex ; 
+  height : 50px ;
+  align-items: center ; 
+}
+
+#generate_btn_contener {
+  display : flex ; 
+  justify-content: left ;
+}
+
+#generate_btn {
+  font-size : 20px ;
+  font-weight : 400 ;
+}
+
+.card-footer {
+  /* display : flex ; */
+  height : 50px ;
+  font-size : 15px ;
+  font-weight : 200 ;
+  display : flex ;
+  align-items : center ; 
+  justify-content : right ;
+}
