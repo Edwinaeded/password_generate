@@ -33,8 +33,23 @@ let excludeCharacters = exclude_setting_input.value //為什麼不能用變數�
 function getPassword() {
   let password_length = getPasswordLength()
   let passwordCharacters = getCharacters()
+
+  //過濾想移除的字符
+  for (k = (exclude_setting_input.value.length -1) ; k >= 0 ; k--) {
+    let charToRemove = exclude_setting_input.value[k]
+    if (passwordCharacters.includes(charToRemove)){
+      console.log(`字符庫移除${charToRemove}`)
+      let index = passwordCharacters.indexOf(charToRemove)
+      if (index !== -1 ){
+        passwordCharacters = passwordCharacters.slice(0,index) + passwordCharacters.slice(index+1)
+      }else if(index === -1){
+        console.log("過濾語法有誤!")
+      }
+    }
+  }
+
   if (passwordCharacters.length === 0) {
-    alert("至少需選取一項字詞組合！")
+    alert("沒有可用的字符！")
   } else if (Number(length_setting_input.value) < 4 | Number(length_setting_input.value) > 16) {
     return
   } else {
@@ -42,15 +57,10 @@ function getPassword() {
     for (let i = 0; i < password_length; i++) {
       let index = getRandom(passwordCharacters.length)
       randomCharacter = passwordCharacters[index]
-      if (exclude_setting_input.value.includes(randomCharacter)) {
-        i--
-        console.log(`去掉單字${randomCharacter}`)
-      } else {
-        password += randomCharacter
-      }
+      password += randomCharacter
     }
-    console.log(password)
-    console.log(exclude_setting_input.value)
+    
+    console.log(exclude_setting_input.value) 
     console.log(excludeCharacters) //會獲得空白值
 
     result_box_container.innerHTML = `<div class="alert alert-warning" role="alert" id="result_box">
